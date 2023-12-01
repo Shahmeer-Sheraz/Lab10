@@ -14,11 +14,13 @@ package expressivo;
  * You may, however, add additional methods, or strengthen the specs of existing methods.
  * Declare concrete variants of Expression in their own Java source files.
  */
-public interface Expression {
+public interface Expression 
     
     // Datatype definition
-    //   TODO
-    
+    // Expression = Number(value:Double) + Variable(name:String)                      
+    //               + Plus(left:Expression, right:Expression)
+    //               + Times(left:Expression, right:Expression)
+
     /**
      * Parse an expression.
      * @param input expression to parse, as defined in the PS3 handout.
@@ -54,4 +56,4 @@ public interface Expression {
     
     // TODO more instance methods
     
-}
+
