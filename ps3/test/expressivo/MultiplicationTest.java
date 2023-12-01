@@ -2,9 +2,10 @@ import expressivo.Expression;
 import expressivo.Multiplication;
 import expressivo.Variable;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+
+
 
 public class MultiplicationTest {
 
@@ -46,6 +47,4 @@ public class MultiplicationTest {
 
         assertEquals(multiplication1.hashCode(), multiplication2.hashCode()); // Hash codes should be equal for equal expressions
     }
-
-    // Add more test methods as needed
 }

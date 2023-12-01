@@ -1,7 +1,6 @@
 import expressivo.Addition;
 import expressivo.Expression;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
@@ -14,6 +13,7 @@ public class AdditionTest {
         Addition addition = new Addition(left, right);
         assertEquals("(x + y)", addition.toString());
     }
+
 
     @Test
     public void testAdditionEquals() {
@@ -33,6 +33,7 @@ public class AdditionTest {
         assertNotEquals(addition1, differentAddition); // Different expressions, should not be equal
     }
 
+
     @Test
     public void testAdditionHashCode() {
         Expression left1 = new Variable("x");
@@ -45,6 +46,4 @@ public class AdditionTest {
 
         assertEquals(addition1.hashCode(), addition2.hashCode()); // Hash codes should be equal for equal expressions
     }
-
-    // Add more test methods as needed
 }
