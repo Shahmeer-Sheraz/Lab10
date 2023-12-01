@@ -25,12 +25,17 @@ public class Variable implements Expression {
         // Structural equality check
         return name.equals(variable.name);
     }
-    
+
     @Override
     public int hashCode() {
-        return Objects.hash(name);
-    }
+        // Custom hash code calculation based on the characters of the name
+        int hash = 0;
+        for (char c : name.toCharArray()) {
+            hash = 31 * hash + c;
+        }
+        return hash;
 
 
     // Additional instance methods for Variable can be added here
+}
 }

@@ -24,12 +24,16 @@ public class Multiplication implements Expression {
         Multiplication multiplication = (Multiplication) thatObject;
         return left.equals(multiplication.left) && right.equals(multiplication.right);
     }
-
+    
     @Override
     public int hashCode() {
-        return Objects.hash(left, right);
-    }
+        int leftHash = (left == null) ? 0 : left.hashCode();
+        int rightHash = (right == null) ? 0 : right.hashCode();
+
+        // Custom hash code calculation
+        return 31 * leftHash + rightHash;
 
    
     // Additional instance methods for Multiplication can be added here
+}
 }

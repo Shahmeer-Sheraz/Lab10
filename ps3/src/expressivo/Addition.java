@@ -27,9 +27,11 @@ public class Addition implements Expression {
 
     @Override
     public int hashCode() {
-        return Objects.hash(left, right);
+        // Custom hash code calculation based on the hash codes of the subexpressions
+        int leftHash = (left == null) ? 0 : left.hashCode();
+        int rightHash = (right == null) ? 0 : right.hashCode();
+        return 31 * leftHash + rightHash;
     }
-
 
     // Additional instance methods for Addition can be added here
 }
