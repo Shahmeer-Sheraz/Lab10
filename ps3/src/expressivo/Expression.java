@@ -14,7 +14,7 @@ package expressivo;
  * You may, however, add additional methods, or strengthen the specs of existing methods.
  * Declare concrete variants of Expression in their own Java source files.
  */
-public interface Expression 
+public interface Expression {
     
     // Datatype definition
     // Expression = Number(value:Double) + Variable(name:String)                      
@@ -57,3 +57,4 @@ public interface Expression
     // TODO more instance methods
     
 
+}
